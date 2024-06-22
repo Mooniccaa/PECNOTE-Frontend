@@ -24,7 +24,7 @@ import Computer from './Component/ViewSoftcopy/Computer';
 import Civil from './Component/ViewSoftcopy/Civil';
 import DetailPage from './Component/DetailPage';
 //import Search from './Component/Search';
-
+import Chat from './Component/Chat';
 
 
 
@@ -41,7 +41,6 @@ function App() {
           <Route path="/civil" element={<Civil />} />
           <Route path="/architecture" element={<Architecture />} /> 
           <Route path="/it" element={<IT />} />
-
 
 
           <Route path="/dashboard" element={<AdminPrivateRoute />}>
@@ -62,9 +61,9 @@ function App() {
           <Route path='/buynotes' element={<UserPrivateRoute />}>
             <Route path="" element={<BuyNotes />} />
             <Route path=":slug" element={<DetailPage />} />
-
-      
           </Route>
+          <Route path="/chat" element={<UserPrivateRoute />}>
+          <Route path="/chat" element={<Chat />}/></Route>
 
         </Routes>
       </BrowserRouter>

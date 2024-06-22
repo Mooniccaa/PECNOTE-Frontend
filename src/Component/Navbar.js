@@ -1,5 +1,6 @@
 import React from 'react'
 import { FiShoppingCart } from "react-icons/fi";
+import { FaFacebookMessenger } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { useAuth } from '../Context/ContextApi';
 import { toast } from 'react-toastify';
@@ -40,7 +41,9 @@ export default function Navbar() {
               <li className="nav-item">
                 <Link className="nav-link text-white" to="#"><FiShoppingCart /></Link>
               </li>
-
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/chat"><FaFacebookMessenger /></Link>
+              </li>
               {
                 !auth.token ? (<>
                   <li className="nav-item">
